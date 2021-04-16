@@ -10,8 +10,8 @@ import {
   REMOVE_DB_PROFILE,
   FETCH_DB_POSTS,
   REMOVE_DB_POSTS,
-  FETCH_POSTS_COMMENTS,
-  REMOVE_POSTS_COMMENTS
+  FETCH_POST_COMMENTS,
+  REMOVE_POST_COMMENTS
 } from './action_types';
 
 export const success = () => {
@@ -83,15 +83,15 @@ export const remove_db_posts = () => {
   }
 }
 
-export const fetch_posts_commentts = comments => {
+export const fetch_post_commentts = comments => {
   return {
-    type: FETCH_POSTS_COMMENTS,
+    type: FETCH_POST_COMMENTS,
     payload: comments
   }
 }
 
-export const remove_posts_comments = () => {
+export const remove_post_comments = () => {
   return {
-    type: REMOVE_POSTS_COMMENTS
+    type: REMOVE_POST_COMMENTS
   }
 }
