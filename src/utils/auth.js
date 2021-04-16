@@ -1,4 +1,5 @@
 import auth0 from 'auth0-js';
+import history from '../utils/history'
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
@@ -21,6 +22,9 @@ export default class Auth {
 
         let expiresAt = JSON.stringify(authResult.expiresIn(authResult.expiresIn * 1000 + new Date().getTime()));
         localStorage.setItem('expiresAt', expiresAt);
+        setTimeout(() => {
+          history.replace('/authcheck')
+        }, 200)
       } else {
         console.log(err);
       }

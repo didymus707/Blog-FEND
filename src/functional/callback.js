@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Callback = () => {
+const Callback = (props) => {
   return (
     <div>
-      
+      Callback
+      {console.log(props)}
     </div>
   )
 }
